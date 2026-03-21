@@ -71,7 +71,7 @@ Notices for file(s):
 ------------------------------------------------------------
 Notices for software(s):
 Software: toybox
-Version: 0.8.10
+Version: 0.8.12
 Path: //third_party/toybox
 ------------------------------------------------------------
 Copyright (C) 2006, 2019 by Rob Landley <rob@landley.net>
@@ -149,15 +149,15 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ============================================================
 Notices for file(s):
+/etc/ld-musl-namespace-aarch64-New.ini
+/etc/ld-musl-namespace-aarch64-flex.ini
 /etc/ld-musl-namespace-aarch64.ini
 ------------------------------------------------------------
 Notices for software(s):
 Software: musl
 Version: 1.2.5
 Software: OpenBSD
-Version: 7.6
-Software: openEuler:jemalloc
-Version: 5.3.0-1.oe2203sp3
+Version: 7.8
 Path: //third_party/musl
 ------------------------------------------------------------
 musl as a whole is licensed under the following standard MIT license:
@@ -1749,7 +1749,7 @@ Notices for file(s):
 ------------------------------------------------------------
 Notices for software(s):
 Software: PCRE2
-Version: pcre2-10.44
+Version: pcre2-10.46
 Path: //third_party/pcre2
 ------------------------------------------------------------
 PCRE2 LICENCE

@@ -31,10 +31,10 @@ apt install -y \
 WORKDIR=$(pwd)
 
 # Download OpenHarmony source code
-rm -rf OpenHarmony-v6.0-Release code-v6.0-Release.tar.gz
-aria2c -s 16 -x 16 -k 1M https://repo.huaweicloud.com/openharmony/os/6.0-Release/code-v6.0-Release.tar.gz
-tar -zxf code-v6.0-Release.tar.gz
-cd OpenHarmony-v6.0-Release/OpenHarmony
+rm -rf OpenHarmony-v6.1-Release code-v6.1-Release.tar.gz
+aria2c -s 16 -x 16 -k 1M https://repo.huaweicloud.com/openharmony/os/6.1-Release/code-v6.1-Release.tar.gz
+tar -zxf code-v6.1-Release.tar.gz
+cd OpenHarmony-v6.1-Release/OpenHarmony
 
 # Disable HiLog because the container does not include the HiLog service.
 cd third_party/musl/
@@ -42,4 +42,4 @@ patch -p1 < $WORKDIR/disable-hilog.patch
 cd ../../
 
 # Build OpenHarmony operating system image, output in out/rk3568/packages/phone/images/
-./build.sh --product-name rk3568 --target-cpu arm64
+./build.sh --product-name rk3568 --target-cpu arm64 --build-target ramdisk_image --build-target system_image

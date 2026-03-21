@@ -28,7 +28,8 @@ docker exec -it ohos sh
 Available tags
 | Tag     | Description                                                             |
 |---------|-------------------------------------------------------------------------|
-| latest  | The latest release (currently equivalent to 6.0).                       |
+| latest  | The latest release (currently equivalent to 6.1).                       |
+| 6.1     | An image based on OpenHarmony 6.1 Release.                              |
 | 6.0     | An image based on OpenHarmony 6.0 Release.                              |
 | main    | The mainline version, built using the latest build scripts from the main branch of this repository. |
 

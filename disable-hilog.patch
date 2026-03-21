@@ -1,10 +1,10 @@
 
 project third_party/musl/
 diff --git a/ldso/linux/dynlink.c b/ldso/linux/dynlink.c
-index 15914ac8..7d21a218 100644
+index d27b728ee..313d923a7 100644
 --- a/ldso/linux/dynlink.c
 +++ b/ldso/linux/dynlink.c
-@@ -3478,9 +3478,6 @@ void __dls3(size_t *sp, size_t *auxv, size_t *aux)
+@@ -3778,9 +3778,6 @@ void __dls3(size_t *sp, size_t *auxv, size_t *aux)
  	InitParameterClient();
  #endif
  
@@ -15,7 +15,7 @@ index 15914ac8..7d21a218 100644
  	InstallPACHandler();
  #endif
 diff --git a/porting/linux/user/src/hilog/hilog_adapter.c b/porting/linux/user/src/hilog/hilog_adapter.c
-index bfe1a34c..c73c5025 100644
+index bfe1a34cb..c73c50250 100644
 --- a/porting/linux/user/src/hilog/hilog_adapter.c
 +++ b/porting/linux/user/src/hilog/hilog_adapter.c
 @@ -69,32 +69,7 @@ static void Cleanup()
@@ -79,7 +79,7 @@ index bfe1a34c..c73c5025 100644
  
  #ifdef OHOS_ENABLE_PARAMETER
 diff --git a/src/hilog/linux/hilog_adapter.c b/src/hilog/linux/hilog_adapter.c
-index cbe371d5..a5893367 100644
+index df9d343a5..9764930f1 100644
 --- a/src/hilog/linux/hilog_adapter.c
 +++ b/src/hilog/linux/hilog_adapter.c
 @@ -65,19 +65,7 @@ extern int __close(int fd);
@@ -103,7 +103,7 @@ index cbe371d5..a5893367 100644
  }
  
  HILOG_LOCAL_API
-@@ -234,23 +222,12 @@ int HiLogAdapterVaList(LogType type, LogLevel level, unsigned int domain, const
+@@ -248,23 +236,12 @@ int HiLogAdapterVaList(LogType type, LogLevel level, unsigned int domain, const
  
  bool is_musl_log_enable()
  {
@@ -128,4 +128,4 @@ index cbe371d5..a5893367 100644
 +    return false;
  }
  
- #ifdef OHOS_ENABLE_PARAMETER
+ bool HiLogBaseIsLoggable(unsigned int domain, const char *tag, LogLevel level)

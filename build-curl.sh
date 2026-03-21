@@ -2,7 +2,7 @@
 set -e
 
 # Setup ohos-sdk
-curl -fLO https://repo.huaweicloud.com/openharmony/os/6.0-Release/ohos-sdk-windows_linux-public.tar.gz
+curl -fLO https://repo.huaweicloud.com/openharmony/os/6.1-Release/ohos-sdk-windows_linux-public.tar.gz
 mkdir /opt/ohos-sdk
 tar -zxf ohos-sdk-windows_linux-public.tar.gz -C /opt/ohos-sdk
 cd /opt/ohos-sdk/linux

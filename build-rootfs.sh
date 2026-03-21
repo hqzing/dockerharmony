@@ -7,12 +7,12 @@ apt install -y gzip cpio patchelf
 # Extract necessary files from the operating system image.
 rm -rf system ramdisk
 mkdir system-tmp
-mount -o loop OpenHarmony-v6.0-Release/OpenHarmony/out/rk3568/packages/phone/images/system.img system-tmp
+mount -o loop OpenHarmony-v6.1-Release/OpenHarmony/out/rk3568/packages/phone/images/system.img system-tmp
 cp -r system-tmp system
 umount system-tmp
 rm -rf system-tmp
 mkdir ramdisk
-cp OpenHarmony-v6.0-Release/OpenHarmony/out/rk3568/packages/phone/images/ramdisk.img ramdisk/ramdisk.img.gz
+cp OpenHarmony-v6.1-Release/OpenHarmony/out/rk3568/packages/phone/images/ramdisk.img ramdisk/ramdisk.img.gz
 cd ramdisk
 gunzip ramdisk.img.gz
 cpio -i -F ramdisk.img
